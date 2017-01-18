@@ -1,0 +1,30 @@
+.main{
+	height:200px;
+	width:400px;
+	background-color: #ccc;
+
+	position:absolute;
+	top:50%;
+	margin-top:-100px;
+	left:50%;
+	margin-left:-200px;
+}
+
+.left-top-area{
+	width:50px;
+	height:50px;
+	border-radius:50px 50px 50px 50px;
+	background-color: #FC0;
+
+	position:absolute;
+}
+
+.right-bottom-area{
+	width: 50px;
+	height: 50px;
+	border-radius: 50px 0 0 0;
+	position: absolute;
+	background-color: #FC0;
+	right: 0;
+	bottom: 0;
+}

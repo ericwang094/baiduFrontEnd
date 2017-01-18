@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- <link rel="stylesheet" href="style/task_1_3_1.css" style="text/css"> -->
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box-set:before,.box-set:after{
+			content:"";
+			display:table;
+		}
+
+		.box-set:after{
+			clear:both;
+		}
+
+		.box-set{
+			*zoom:1;
+		}
+
+		.box{
+			background-color: #8ec63f;
+			height:100px;
+			float:left;
+			margin:10px;
+			width:200px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box-set">
+		<div class="box">box1</div>
+		<div class="box">box2</div>
+		<div class="box">box3</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+
+body{
+	width: 100%;
+	min-width: 1280px;
+}
+
+header{
+	height: 57px;
+}
+
+header p{
+	display: inline;
+	line-height: 57px;
+}
+
+header ul{
+	float:right;
+	list-style-type: none;
+	margin-right: 30px;
+}
+
+header ul li{
+	float:left;
+	line-height: 57px;
+	margin-right: 20px;
+}
+
+header ul li img{
+	padding-right:10px;
+}
+
+.headerIcon1{
+	line-height: 57px;
+	margin-left:50px;
+	margin-right:10px;
+}
+
+.intro{
+	width:100%;
+	height:650px;
+	background-image: url(images/pic01.jpg);
+	background-size: 100% auto; 
+	
+}
+
+.time_of_new_left{
+	font-size:60px;
+	font-family: 'Microsoft YaHei';
+	color:white;
+	padding-top:231px;
+	margin-left:117px;
+	padding-bottom:10px;
+}
+
+.intro_after_new_age{
+	font-size:21px;
+	font-family: 'Microsoft YaHei';
+	color:white;
+	line-height: 26px;
+	margin-left:117px;
+}
+
+.beginExperience{
+	font-size:21px;
+	font-family: 'Microsoft YaHei';
+	margin-left:117px;
+	width:330px;
+	height:64px;
+	color:white;
+	font-family: 'Microsoft YaHei';
+	line-height: 64px;
+	background-color: #db5353;
+	text-align:center;
+	margin-top:50px;
+}
+
+.fourIcon{
+	
+	height:251px;
+}
+
+.icon1, .icon2, .icon3, .icon4{
+	width:325px;
+	float:left;
+	display: inline;
+	text-align: center;
+	margin-top:40px;
+
+}
+
+.fourIcon p{
+	padding-top:30px;
+	border-right:1px solid black;
+
+}
+
+.gray_bgc{
+	position:relative;
+	height:359px;
+	text-align: center;
+	background-color: #EDEAEA;
+}
+
+.gray_bgc p{
+
+	font-size:56px;
+	color:#DBD6D6;
+	padding-top:30px;
+}
+
+.gray_bgc img{
+	font-size:56px;
+	color:#DBD6D6;
+	padding-top:80px;
+}
+
+.cityInfo{
+	height:340px;
+	width:100%;
+	background-image: url(images/pic02.jpg);
+	background-size: cover;
+	background-size: 100% auto; 
+	text-align: center;
+}
+
+.search{
+	padding-top:100px;
+	color:white;
+}
+
+.searchsmall{
+	padding-top:30px;
+	color:white;
+}

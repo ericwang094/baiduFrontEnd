@@ -1,0 +1,61 @@
+.main_wrapper
+{
+	margin:0 auto;
+	padding:20px;
+	background-color: #eee;
+	border:1px solid #999;
+	overflow: hidden;
+}
+
+.left
+{
+	float:left;
+	padding:20px;
+	width:160px;
+	background-color: #fff;
+	border:1px solid #999;
+}
+
+.left>img
+{
+	float:left;
+}
+
+
+.left>p
+{
+	width:180px;
+	font-size: 13px
+	font-weight:bold;
+	text-align:center;
+}
+
+.right
+{
+	width:120px;
+	float:right;
+	background: #fff;
+ 	border: 1px solid #999;
+
+}
+
+.memeber_logo
+{
+	background: #fff;
+	display:block;
+	margin: 20px auto;
+	border: 1px solid #999;
+	text-align: center;
+}
+
+
+.middle
+{
+	padding:20px;
+	margin:0 280px;
+	background-color: #fff;
+	border:1px solid #999;
+}
+
+
+

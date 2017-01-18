@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<fieldset id="form-gra-time">
+		<legend>请选择日期粒度：</legend>
+		<label>日<input name="gra-time" value="day" type="radio" checked="checked"></label>
+		<label>周<input name="gra-time" value="week" type="radio"></label>
+		<label>月<input name="gra-time" value="month" type="radio"></label>
+	</fieldset>
+
+	<fieldset>
+		<legend>请选择查看的城市：</legend>
+		<select id="city-select">
+			<option value="0">--请选择城市--</option>
+			<option value="1">北京</option>
+			<option value="2">上海</option>
+			<option value="3">广州</option>
+			<option value="4">深圳</option>
+			<option value="5">成都</option>
+			<option value="6">西安</option>
+			<option value="7">福州</option>
+			<option value="8">厦门</option>
+			<option value="9">沈阳</option>
+			<option value="10">哈尔滨</option>
+		</select>
+	</fieldset>
+
+	<div class="title">
+		<p>
+			当前城市: <span class="city-name"></span>
+		</p>
+		<p>
+			<span class="city-date">Day</span>
+			统计图
+		</p>
+	</div>
+
+	<div class="aqi-chart-wrap">
+		<div class="y-cross">
+			<span>1000</span>
+			<span>900</span>
+			<span>800</span>
+			<span>700</span>
+			<span>600</span>
+			<span>500</span>
+			<span>400</span>
+			<span>300</span>
+			<span>200</span>
+			<span>100</span>
+			<span>0</span>
+		</div>
+		<ul class="aqi-chart-ul">
+			<li class="aqi-chart-Date show" data-value="Day"></li>
+			<li class="aqi-chart-Week " data-value="Week"></li>
+			<li class="aqi-chart-Month" data-value="Month"></li>
+		</ul>
+	</div>
+	
+
+	<script src="task17.js"></script>
+</body>
+</html>

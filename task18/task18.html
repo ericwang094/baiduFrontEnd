@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#display button{
+			width: 50px;
+			height: 50px;
+			background-color: red;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+	<form class="top">
+		<input type="text" name="input" id="input">
+		<button id="leftInsert" type="button">Left insert</button>
+		<button id="rightInsert" type="button">right insert</button>
+		<button id="leftOut"" type="button">left out</button>
+		<button id="rightOut" type="button">right out</button>
+	</form>
+
+	<div id="display">
+	</div>
+</body>
+<script>
+	
+	var display = document.getElementById("display");
+
+	function left_insert()
+	{
+		var input = document.getElementById("input").value;
+		if(/\d/.test(input))
+		{
+			var newButton = document.createElement("button");
+			newButton.innerHTML = input;
+			display.insertBefore(newButton, display.childNodes[0]);
+		}else{
+			console.log("unlegal");
+		}
+	}
+
+	function right_insert()
+	{
+		var input = document.getElementById("input").value;
+		if(/\d/.test(input))
+		{
+			var newButton = document.createElement("button");
+			newButton.innerHTML = input;
+			display.appendChild(newButton);
+		}else
+		{
+			console.log("unlegal");
+		}
+	}
+
+	function left_out()
+	{
+		var childNodesLength = display.childElementCount;
+		console.log("length: "+childNodesLength);
+		if(childNodesLength > 0){
+			console.log("node1: "+display.childNodes[0].tagname);
+			var firstChild =  display.childNodes[0];
+			display.removeChild(firstChild);
+			alert(firstChild.innerHTML);
+		}
+	}
+
+	function right_out()
+	{
+		var childNodesLength = display.childElementCount;
+		if(childNodesLength > 0){
+			console.log("length: "+childNodesLength);
+			var lastChild =  display.childNodes[childNodesLength-1];
+			display.removeChild(lastChild);
+			alert(lastChild.innerHTML);
+		}
+	}
+
+	function handleClickEvent(e)
+	{
+		console.log("hit");
+		display.removeChild(e.target);
+	}
+
+
+	function init()
+	{
+		var leftInsert = document.getElementById("leftInsert");
+		var rightInsert = document.getElementById("rightInsert");
+		var leftOut = document.getElementById("leftOut");
+		var rightOut = document.getElementById("rightOut");
+		
+		leftInsert.onclick = left_insert;
+		rightInsert.onclick = right_insert;
+		leftOut.onclick = left_out;
+		rightOut.onclick = right_out;
+
+		display.onclick = handleClickEvent;
+	}
+	
+	init();
+</script>
+</html>

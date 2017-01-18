@@ -1,0 +1,76 @@
+body
+{
+	background-color: #DEDEDE;
+}
+
+header
+{
+	position:relative;
+	height:60px;
+	background-color: #333;
+}
+
+header ul
+{
+	position:absolute;
+	top:0px;
+	right:10px;
+}
+
+header ul li
+{
+	width:60px;
+	position:relative;
+	float:left;
+}
+
+header ul li a
+{
+	text-decoration: none;
+	color:white;
+	font-size:12px;
+}
+
+header ul li:hover
+{
+	border-bottom:1px solid red;
+	background: #474747;
+	border-radius:3px;
+}
+
+article, aside
+{
+	display:block;
+	margin:30px; 
+	padding:20px;
+	background: white;
+	box-shadow:1px 1px 2px 1px #848484;
+}
+
+
+/*aside*/
+aside h4
+{
+	height:40px;
+	line-height: 40px;
+	padding-left: 10px
+	border-left:3px solid #ccc;
+}
+
+aside form div .tips
+{
+	float:left;
+	text-align:right;
+	widht:35%;
+	padding-right:15px;
+}
+
+aside .submitButton{
+    width:100%;
+    height:40px;
+    border-radius: 10px;
+    background: #128fdc;
+    color: white;
+    font-size: 19px;
+    border:none;
+}
