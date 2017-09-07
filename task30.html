@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+
+		.box{
+			margin:20px 20px;
+			position:relative;
+		}
+
+		.box label{
+			display:inline-block;
+			width:100px;
+			text-align:right;
+			margin-right:20px;
+			padding-bottom:30px;
+			box-sizing: border-box;
+		}
+
+		.box input{
+			width:300px;
+			padding:5px 10px;
+			border-radius:5px;
+			outline:none;
+			border:2px solid #ccc;
+			box-sizing:border-box;
+		}
+
+		.box input:hover{
+			border:2px solid #caf;
+			box-shadow:0 0 2px #caf;
+		}
+
+		.box input:active, .box input:focus {
+			  border: 2px solid #0af;
+			  box-shadow: 0 0 2px #0af;
+		}
+
+		input[type='button']
+		{
+			padding: 5px 20px;
+			margin-left: 130px;
+			width: 300px;
+			border-radius: 5px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div class="box">
+			<label>name</label>
+			<input id="name" type="text">
+			<div data-info="必填，长度为4-16个字符"></div>
+		</div>
+		
+		<div class="box">
+			<label>password</label>
+			<input id="password" type="password">
+			<div data-info="必填，长度为4-16个字符"></div>
+		</div>
+		
+		<div class="box">
+			<label>repeat password</label>
+			<input id="repassword" type="password">
+			<div data-info="必填，必须和前面一致"></div>
+		</div>
+		
+		<div class="box">
+			<label for="email">邮箱</label>
+			<input id="email" type="email" name="email">
+			<div data-info="必填，需使用正确的电子邮件地址形式">
+		</div>
+		<input type="button" name="submit" value="提交" />
+	</form>
+</body>
+</html>

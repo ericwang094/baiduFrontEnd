@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		margin:0px;
+		padding:0px;
+		box-sizing:border-box;
+		width:1000px;
+		height:100%;
+	}
+
+	.wrapper{
+		width:1000px;
+		
+	}
+
+	table{
+		margin:10px auto;
+		/*border:1px solid black;*/
+		border-collapse:collapse;
+	}
+
+	.wrapper .insideWrap{
+		float:right;
+	}
+
+	table th, table td{
+		border:1px solid black;
+		padding:5px 20px;
+		text-align:center;
+	}
+
+	.wrapper span{
+		display:inline-block;
+		height:36px;
+		line-height: 36px;
+		margin-right:5px;
+	}
+
+	.wrapper .insideWrap div{
+		cursor:pointer;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<table id="table">
+			<tr>
+				<th>Name</th>
+				<th><span>Chinese</span>
+					<div class="insideWrap">
+						<div id="ch_up">▲</div>
+						<div id="ch_down">▼</div>
+					</div>
+				</th>
+				<th><span>Math</span>
+					<div class="insideWrap">
+						<div id="math_up">▲</div>
+						<div class="math_down">▼</div>
+					</div>
+				</th>
+				<th><span>English</span>
+					<div class="insideWrap">
+						<div id="en_up">▲</div>
+						<div id="en_down">▼</div>
+					</div>
+				</th>
+				<th><span>Total</span>
+					<div class="insideWrap">
+						<div id="total_up">▲</div>
+						<div id="total_down">▼</div>
+					</div>	
+				</th>
+			</tr>
+		</table>
+	</div>
+
+	<script type="text/javascript" src="task38.js"></script>
+</body>
+</html>

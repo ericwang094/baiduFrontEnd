@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#win{
+			
+            position:absolute;
+			width:400px;
+			height:200px;
+			top:50%;
+			left:50%;
+			border: 3px solid black;
+			margin-left: -200px;
+            margin-top: -100px;
+			
+		}
+
+		#win h2{
+			margin-top:0px;
+			background-color: green;
+			padding:10px 0;
+			cursor:move;
+		}
+
+		#win span{
+			margin-left:200px;
+			cursor: pointer;
+		}
+
+		#content button{
+			background-color: green;
+			padding:10px 15px;
+			color:white;
+			cursor: pointer;
+		}
+
+		#mask{
+			
+			height:100%;
+			width:100%;
+			background-color: gray;
+			opacity: 0.3;
+		}
+
+		body {
+            height: 1200px;
+            position:relative;
+        }
+
+	</style>
+</head>
+<body>
+	<div id="mask"></div>
+	<div id="win">
+		<h2>this is pop up<span>x</span></h2>
+		<div id="content">
+			<p>This is pop up</p>
+			<div>
+				<button>Confirm</button>
+				<button>Cancel</button>
+			</div>
+		</div>
+	</div>
+
+	<button>click me</button>
+	<script type="text/javascript">
+
+		var win = document.getElementById("win");
+		var close = document.getElementsByTagName("span")[0];
+		var title = document.getElementsByTagName("h2")[0];
+		var confirm = document.getElementsByTagName("button")[0];
+		var cancel = document.getElementsByTagName("button")[1];
+		var click = document.getElementsByTagName("button")[2];
+		var mask = document.getElementById("mask");
+	
+
+		// 创建eventUtil对象
+		var eventUtil = {
+		    // 添加
+		    addHandler: function(elt, type, handler) {
+		        if (elt.addEventListener) {
+		            elt.addEventListener(type, handler, false);
+		        } else if (elt.attachEvent) {
+		            elt.attachEvent("on" + type, handler);
+		        } else {
+		            elt["on" + type] = handler;
+		        }
+		    }
+		};
+
+		function setDrag(event)
+		{
+			var disX, disY;
+			event = event || window.event;
+			disX = event.clientX - win.offsetLeft;
+			disY = event.clientY - win.offsetTop;
+			document.onmousemove = function(event)
+			{
+				event = event || window.event;
+				win.style.left = event.clientX + 200 - disX+"px";
+				win.style.top = event.clientY + 100 - disY +"px";
+			};
+
+			document.onmouseup  = function(){
+				document.onmousedown = null;
+				document.onmousemove = null;
+			}
+		}
+
+		function setBlock() {
+		    win.style.display = "block";
+		    mask.style.display = "block";
+		}
+
+		function setNone() {
+		    win.style.display = "none";
+		    mask.style.display = "none";
+		}
+
+
+		eventUtil.addHandler(click, "click", setBlock);
+		eventUtil.addHandler(close, "click", setNone);
+		eventUtil.addHandler(cancel, "click", setNone);
+		eventUtil.addHandler(mask, "click", setNone);
+		eventUtil.addHandler(title, "mousedown", setDrag);
+		eventUtil.addHandler(confirm, "click", function(){alert("这是一个弹出层")});
+	</script>
+
+</body>
+	
+</html>
