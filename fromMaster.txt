@@ -1,1 +1,1 @@
-fromMaster-fromBranch
+fromMaster
